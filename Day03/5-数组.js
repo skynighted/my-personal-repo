@@ -6,10 +6,10 @@
  */
 // 数组创建 使用字面量创建
 var arr = [10,true,null,undefined,"hello",{name:'larry'}];
-// console.log(a);
-// console.log(a.length,'未修改前');
-// a.length = 5;
-// console.log(a,'修改后');
+// console.log(arr);
+// console.log(arr.length,'未修改前');
+// arr.length = 5;
+// console.log(arr,'修改后');
 
 
 // 数组访问 arr[index] index 下标从0开始 访问数据元素
@@ -34,7 +34,8 @@ var arr1 = [10,20,30,40,50];
 var res = arr1.every(function(item,index,arr){
     // item是数组每个元素 index就是数组元素对应的索引 arr就是数组元素本身
     // console.log(item,index,arr);
-    return item > 10;
+    console.log('111');
+    return item > 5;
 });
 console.log(res);
 
