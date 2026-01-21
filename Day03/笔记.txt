@@ -52,7 +52,7 @@ Git个人使用：
     首次提交代码到远程仓库 将本地仓库和远程仓库进行绑定
         git remote add origin https://gitee.com/processing-assistant/my-personal-repo.git
     查看绑定的远程仓库 git remote -v
-    7.将本地仓库代码提交到远程仓库
+    7.将本地仓库代码推送到远程仓库
         git push origin "master"
 
     后续使用：
