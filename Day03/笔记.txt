@@ -48,3 +48,15 @@ Git个人使用：
     3.将本地代码文件夹 初始化成git仓库 git init
     4.git add . 将更改/新增的代码提交到暂存区
     5.git status 查看git提交状态
+    6. git commit -m '王鹏瑞提交了期末实践5的学习代码' 将暂存区文件提交到本地仓库
+    首次提交代码到远程仓库 将本地仓库和远程仓库进行绑定
+        git remote add origin https://gitee.com/processing-assistant/my-personal-repo.git
+    查看绑定的远程仓库 git remote -v
+    7.将本地仓库代码提交到远程仓库
+        git push origin "master"
+
+    后续使用：
+        git add .
+        git status
+        git commit -m ''
+        git push origin "master"
