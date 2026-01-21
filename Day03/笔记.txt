@@ -1,0 +1,50 @@
+JavaScript是一门编程语言，允许用户在浏览器页面上完成复杂的事情。
+    Node.js技术 egg express koa....
+组成：
+    1.ECMAScript 核心js
+        变量 数组 对象 函数
+    2.DOM(Document Object Model)文档对象模型 操作网页元素api
+    2.BOM(Browser Object Model)浏览器对象模型 操作网页元素api
+运行环境：
+    1.nodejs环境
+    2.浏览器环境
+注释：
+    单行注释 // ctrl + / 
+    多行注释 /***/ 输入/**按下enter
+特点：
+    1.解释性语言 js需要解析器解析执行
+        nodejs 浏览器能解析 内置js解析器
+    2.弱类型语言
+        可以重复声明 可以更换数据类型
+    3.从上到下按照代码解析顺序解析执行
+    4.大小写敏感，可以作为客户端语言，也可以作为服务器端语言
+标识符(变量)声明规则
+    1.不能以数字开头
+    2.由字母、数字、下划线、$组成
+    3.不能使用js中的关键字和保留字
+        不能使用 var break class let const
+    4.建议使用驼峰式命名
+        firstName 小驼峰
+        LastName 大驼峰
+变量如何声明？
+    es5：
+        var
+    2015年之后新增js特性
+    es6
+        let
+        const
+js数据类型？
+    1.基本数据类型（简单数据类型）
+        string number boolean null undefined symbol bigint 
+    2.引用数据类型（复杂数据类型）
+    只有object
+
+Git个人使用：
+    上传代码到远程仓库
+    1.新建远程仓库
+    2.首次使用全局配置(第一次使用)：
+        配置用户名 git config --global user.name "wpr"
+        配置邮箱 git config --global user.email "16022918+processing-assistant@user.noreply.gitee.com"
+    3.将本地代码文件夹 初始化成git仓库 git init
+    4.git add . 将更改/新增的代码提交到暂存区
+    5.git status 查看git提交状态

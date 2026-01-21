@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /* 合并单元格 */
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- 表格标签
+        tr 表示一行
+        td 表示一列中的一个单元格
+        border 设置边框宽度
+        cellspacing 设置单元格和单元格之间的距离
+        cellpadding 设置单元格和内容之间的距离
+        th 表头标签 自带居中加粗效果
+        width 宽
+        height 高
+        align 设置表格的水平对齐方式 left center right
+        bgcolor 设置表格背景色 
+        background 设置表格的背景图片
+        不建议使用html属性设置背景图片和背景颜色 一般建议使用css属性设置背景图片和颜色
+        tr或者td valign设置垂直对齐方式 top middle(默认) bottom
+    -->
+    <table width="400px" height="300px" bgcolor="cyan" border="1" cellspacing="0" background="./音视频/images/ad7.jpeg" align="center">
+        <caption>个人信息表</caption>
+        <tr bgcolor="red">
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr align="center">
+            <td bgcolor="pink">terry</td>
+            <td align="right">25</td>
+            <td>male</td>
+        </tr>
+        <tr valign="top">
+            <td>larry</td>
+            <td valign="middle">28</td>
+            <td valign="bottom">female</td>
+        </tr>
+    </table>
+    <!-- 表格完整结构 -->
+    <table>
+        <!-- 表头 -->
+        <thead></thead>
+        <!-- 表头 -->
+        <tbody></tbody>
+        <!-- 表头 -->
+        <tfoot></tfoot>
+    </table>
+
+    <!-- 表格跨行和跨列合并 -->
+    <table border="1" width="300px" height="300px">
+        <tr>
+            <!-- colspan属性表示跨列合并 -->
+            <td colspan="2">11</td>
+            <!-- <td>12</td> -->
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <!-- rowspan属性表示跨行合并 -->
+            <td rowspan="2">22</td>
+            <td>23</td>
+            <!-- 跨多行合并 跨多列合并 -->
+            <td colspan="3" rowspan="2">24</td>
+            <!-- <td>25</td>
+            <td>26</td> -->
+        </tr>
+        <tr>
+            <td>31</td>
+            <!-- <td>32</td> -->
+            <td>33</td>
+            <!-- <td>34</td>
+            <td>35</td>
+            <td>36</td> -->
+        </tr>
+    </table>
+</body>
+</html>

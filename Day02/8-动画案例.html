@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 使用动画简写 */
+            animation: move 2s linear infinite alternate;
+        }
+        @keyframes move {
+            0%{
+                /* 形变 */
+                transform: none;
+                border-radius: 0%;
+            }
+            25%{
+                /* 形变 */
+                transform: translateX(50px) rotate(90deg);
+                border-radius: 10px;
+                background-color: pink;
+            }
+            50%{
+                /* 形变 */
+                transform: translateX(100px) rotate(180deg);
+                border-radius: 20px;
+                background-color: orange;
+            }
+            75%{
+                /* 形变 */
+                transform: translateX(150px) rotate(270deg);
+                border-radius: 30px;
+                background-color: blueviolet;
+            }
+            100%{
+                /* 形变 */
+                transform: translateX(200px) rotate(360deg);
+                border-radius: 50%;
+                background-color: blue;
+            }
+        }
+        @keyframes pround {
+            from{
+                transform: none;
+            }
+            to{
+                /* 放大1.2倍 */
+                transform: scale(1.2);
+            }
+        }
+        img{
+            animation: pround .2s linear infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <img width="150px" src="../音视频/1.webp" alt="">
+</body>
+</html>

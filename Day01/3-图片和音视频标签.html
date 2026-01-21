@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 路径：
+        绝对路径和相对路径
+        D:\期末实践5\Day01\音视频\6.jpg
+        当前目录./ 上一级目录../
+        width height是图片特有属性
+        width和height建议设置其中一个 另一个自适应
+        src特有属性 alt图片加载失败的文字说明
+    -->
+    <img width="200px" src="./音视频/7.jpg" alt="加载失败...">
+    <img src="https://www.firefox.com/media/img/favicons/firefox/browser/favicon-196x196.59e3822720be.png">
+
+    <!-- 音视频标签 -->
+    <!-- 视频标签 
+        1.controls 控制条
+        width和height可以设置
+        autoplay 自动播放
+        loop 循环播放
+        muted 静音播放
+        poster 设置封面 
+    -->
+    <video poster="./音视频/images/ad7.jpeg"  loop muted src="./音视频/1.mp4" width="300px" controls></video>
+    <!-- 音频标签 loop muted autoplay controls -->
+    <audio src="./音视频/1.mp3" controls autoplay muted loop ></audio>
+    <!-- 内嵌其他页面 -->
+    <iframe height="300px" src="https://element.eleme.cn/#/zh-CN/component/installation" frameborder="0"></iframe>
+</body>
+</html>

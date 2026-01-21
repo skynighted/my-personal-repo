@@ -1,0 +1,18 @@
+本次实践项目：大气环境监测系统 只完成静态部分
+    组件库：Antv G2Plot可视化组件库
+    框架：vue3框架
+day01 html+css
+day02 部分css布局方式 + js
+day03 学习vue3语法
+day04 项目编写
+day05 项目模块
+
+前端：	
+    门户网站，用户看到的部分，一股指的是浏览器环境下的网页应用	
+大前端：	
+    大前端就是所有前端的统称，比如web、ios、android、桌面端	心	
+安装扩展：	
+    Chinese 汉化插件	
+    HTML CSS Support html css快捷操作	
+    open in browser 在浏览器打开html页面	
+    Vue3 Snippets Vue3和Vue2扩展

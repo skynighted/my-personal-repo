@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            background-color: red;
+            /* 设置行高 */
+            line-height: 300px;
+            text-align: center;
+            /* 设置过渡属性名称 */
+            /* transition-property: font-size; */
+            /* 设置过渡属性持续时长 */
+            /* transition-duration: 2s; */
+            /* 设置过渡速度曲线 */
+            /* transition-timing-function: linear; */
+            /* 是上面过渡属性简写 */
+            transition:font-size 2s linear,color 2s linear,background-color 2s linear;
+        }
+        div:hover{
+            font-size: 58px;
+            color: white;
+            background-color: pink;
+        }
+        img{
+            /* transform形变 包含缩放 旋转 平移 */
+            transition: width 1s linear;
+        }
+        img:hover{
+            /* scale 缩放 >1 表示放大 <1 表示缩小 */
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>山西农业大学</div>
+    <img height="100px" width="139px" src="../音视频/images/ad12.jpg" alt="">
+</body>
+</html>

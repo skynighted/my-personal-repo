@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 3.外部样式表 -->
+    <!-- <link rel="stylesheet" href="./outer.css"> -->
+    <!-- 2.内部样式表 -->
+    <style>
+        /* 引入外部样式表的方式 使用@import必须是内部样式表第一行有效代码 */
+        @import url(./outer.css);
+        /* 
+            关于CSS语法：选择器+css规则集
+            属性名和属性值之间使用：隔开
+            多对属性之间使用；隔开
+            最后一对属性可以不加；建议加上；
+        */
+        div{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        标签通用属性：
+        1.id 给标签设置一个唯一的id
+        2.class 给标签设置一个类名
+        3.style 给标签设置样式
+        4.title 光标悬浮到文字的提示说明
+    -->
+    <!-- 1.行内样式/内联样式 通过style属性设置样式 -->
+    <div style="width: 100px;height: 100px;">块级元素</div>
+</body>
+</html>

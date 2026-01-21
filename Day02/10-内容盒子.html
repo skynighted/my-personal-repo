@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            css盒模型：
+                分类：
+                    1.内容盒子 标准盒子 w3c盒子
+                    2.边框盒子 IE盒子 怪异盒子
+                区别：
+                    内容盒子的宽高是设置给内容区的宽高
+                    边框盒子的宽高是设置给盒子本身的宽高
+        */
+        /* 
+            计算：154px 138px 201px 169px
+            内容盒子宽和高是设置给内容区的
+            盒子宽：内容区宽 + 左右内边距 + 左右边框 = 154px
+            盒子高：内容区高 + 上下内边距 + 上下边框 = 138px
+            盒子所占页面空间宽：盒子宽 + 左右外边距 = 201px
+            盒子所占页面空间高：盒子高 + 上下外边距 = 169px
+        */
+        div{
+            /* 默认所有的盒子都是内容盒子 */
+            width: 100px;
+            height: 100px;
+            border: 3px solid red;
+            padding: 17px 23px 15px 25px;
+            margin: 14px 26px 17px 21px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

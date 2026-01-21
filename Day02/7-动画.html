@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 2.给标签使用动画 */
+            /* 1.设置动画名称 */
+            animation-name: move;
+            /* 2.设置动画持续时长 */
+            animation-duration: 2s;
+            /* 3.设置动画速度曲线 */
+            animation-timing-function: linear;
+            /* 4.设置动画等待时长 */
+            /* animation-delay: 2s; */
+            /* 5.设置动画执行次数 infinite无限循环执行 n(数字) 表示执行n次 */
+            animation-iteration-count: infinite;
+            /* 6.设置动画反向执行 alternate设置动画反向执行 */
+            animation-direction: alternate;
+        }
+        /* 1.定义动画关键帧 */
+        @keyframes move {
+            /* 需要动画过程 0% 25% 50% 75% 100% */
+            /* 表示动画开始 */
+            from{
+                margin-left: 0;
+            }
+            /* 表示动画结束 */
+            to{
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{ */
+            /* vw viewWidth 可视化区域宽度 */
+            /* width: 80vw; */
+            /* vh viewHeight 可视化区域高度 */
+            /* height: 80vh; */
+            /* 设置背景图片 */
+            /* background-image: url(../音视频/6.jpg); */
+            /* 设置背景图片大小 */
+            /* background-size: 100% 100%; */
+        /* } */
+        /* 
+            计算
+            盒子宽：width就是设置给盒子本身宽  100px
+            盒子高：height就是设置给盒子本身高  100px
+            内容区宽：width - 左右内边距 -左右边框 = 56px
+            内容区高：height - 上下内边距 - 上下边框 = 64px 
+            盒子所占页面空间宽：盒子宽 + 左右外边距 = 142px
+            盒子所占页面空间高：盒子高 + 上下外边距 = 133px
+        */
+        div{
+            /* 设置边框盒子 */
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border: 3px solid pink;
+            margin: 12px 19px 21px 23px;
+            padding: 11px 17px 19px 21px;
+        }
+    </style>
+</head>
+<body>
+    <div>边框盒子</div>
+</body>
+</html>

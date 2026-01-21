@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器(包含子代和其他后代) 使用空格隔开 */
+        .parent p{
+            background-color: red;
+        }
+        /* 子代选择器 使用>隔开 只会选取到直接子代 */
+        .parent>p{
+            color: white;
+            font-size: 20px;
+        }
+        /* 普遍选择器 去除元素的默认样式 */
+        *{
+            margin: 0;
+            padding: 0;
+            /* 去除列表标志项 */
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>块级元素</p>
+        <p>块级元素</p>
+        <p>块级元素</p>
+        <p>块级元素</p>
+        <div>
+            <p>后代元素</p>
+            <p>后代元素</p>
+            <p>后代元素</p>
+            <p>后代元素</p>
+        </div>
+    </div>
+    <ul>
+        <li>上海</li>
+        <li>广州</li>
+        <li>北京</li>
+    </ul>
+</body>
+</html>

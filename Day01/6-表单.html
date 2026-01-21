@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 表单标签 form
+        action表示提交表单的服务器地址 
+    -->
+    <form action="test.php" method="get">
+        <!-- 明文输入框 br表示强制换行 readonly属性表示只读 -->
+        用户:<input type="text" readonly>
+        <!-- 暗文输入框 -->
+        密码:<input type="password"><br>
+        <!-- 单选按钮 产生互斥效果 将选项放在同一个选项组 -->
+        <!-- 单选按钮和复选框设置默认选中checked -->
+        性别:
+        男:<input type="radio" name="gender" value="male">
+        女:<input checked type="radio" name="gender" value="female"><br>
+        <!-- 复选框 爱好 -->
+        爱好:
+        游泳:<input type="checkbox" checked name="hobbies" id="swimming">
+        唱歌:<input type="checkbox" name="hobbies" id="singing">
+        足球:<input type="checkbox" name="hobbies" id="soccer"><br>
+        <!-- 下拉框 -->
+        <select name="city">
+            <!-- 对下拉选项进行分组 shift+alt+f 格式化文档-->
+            <optgroup label="一线城市">
+                <option value="beijing">北京</option>
+                <!-- selected表示默认选中 -->
+                <option value="shanghai" selected>上海</option>
+                <option value="guangzhou">广州</option>
+            </optgroup>
+            <!-- disabled表示禁用 -->
+            <optgroup label="二线城市" disabled>
+                <option value="taiyuan">太原</option>
+                <option value="datong">大同</option>
+                <option value="jinzhong">晋中</option>
+            </optgroup>
+        </select>
+        <!-- 多行文本框 -->
+        <textarea></textarea><br>
+        <!-- h5新增表单元素 -->
+         <!-- 进度条 -->
+         <progress max="100" value="70"></progress>
+         <!-- 滑块 -->
+         <input type="range" max="10" min="0" step="1">
+         <!-- 颜色拾取器 -->
+         <input type="color">
+         <!-- 日期选择器 -->
+         <input type="date" name="" id="">
+         <!-- 时间日期选择器 -->
+         <input type="datetime-local" name="" id=""><br>
+
+        <!-- 普通按钮 -->
+        <input type="button" value="普通按钮">
+        <!-- <button>普通按钮</button> -->
+        <!-- 提价按钮 将表单提交到服务器 -->
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>
