@@ -60,3 +60,6 @@ Git个人使用：
         git status
         git commit -m ''
         git push origin "master"
+
+如何获取别人的代码？
+    前提是开源
