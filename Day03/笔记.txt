@@ -63,3 +63,6 @@ Git个人使用：
 
 如何获取别人的代码？
     前提是开源
+    克隆项目远程地址
+    git clone 远程仓库地址
+    获取最新代码 git pull origin master
