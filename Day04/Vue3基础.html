@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .active{
+            margin: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .text-danger{
+            color: red;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 模板视图 -->
+    <div id="app">
+        <!-- 基础语法 Mustache语法 文本插值语法 -->
+        {{message}}
+        <!-- 文本插值只会将变量解释为纯文本 而非html代码 v-html -->
+        <span v-html="a"></span>
+        <!-- 动态绑定 使用v-bind绑定变量 -->
+        <div v-bind:title="title">块级元素</div>
+        <!-- v-bind可以简写为: Vue3.4+ 属性名和变量名一致可以简写为属性名 -->
+        <!-- :title等同于:title="title"  -->
+        <section :title>section块级元素</section>
+        <button :disabled="isBtn">点击我</button>
+
+        <!-- 动态绑定多个值 -->
+        <div v-bind="obj">块级元素</div>
+
+        <!-- js表达式 文本插值内部 -->
+        {{count + 10}}
+        {{10>3?'YES':'NO'}}
+        {{msg.split(' ').reverse().join(' ') }}
+        <!-- 事件绑定 v-on:事件类型 = '事件处理程序' -->
+        <button v-on:click="handler">点击我让count自增{{count}}</button>
+        <!-- v-on可以简写为@ -->
+        <button @click="handler">点击我</button>
+        <!-- 动态类名的绑定 -->
+        <p :class="{active:IsActive,'text-danger':hasError}">段落标签</p>
+        <!-- 动态样式绑定 -->
+        <section :style="{color:activeColor,'font-size':fontSize + 'px'}">块级元素section</section>
+        <section :style="styleObj">section标签</section>
+    </div>
+    <script>
+        // console.log(Vue,'Vue对象'); 解构
+        // let obj = {
+        //     name:'terry',
+        //     age:20
+        // };
+        // let {name} = obj;
+        const {createApp,ref,reactive} = Vue;
+        // 创建vue应用  调用mount方法与id为app模板进行绑定
+        createApp({
+            // vue应用入口函数 组合式api
+            setup() {
+                const message = ref("hello Vue3");
+                const a = ref("<a href='https://www.baidu.com'>百度一下</a>");
+                const title = ref("我是绑定的title变量");
+                const isBtn = ref(1);
+                const obj = reactive({
+                    id:'one',
+                    class:'two',
+                    style:'background-color:pink'
+                });
+                const styleObj = reactive({
+                    backgroundColor:'orange',
+                    width:'100px',
+                    height:'100px'
+                })
+                const activeColor = ref('red');
+                const fontSize = ref(28);
+                // 使用ref包裹的属性会被带有到一个.value的对象中
+                const count = ref(0);
+                // console.log(count,"---------------");
+
+                const msg = ref('I love ZBM');
+                const handler = ()=>{
+                    count.value++;
+                };
+                const IsActive = ref(true);
+                const hasError = ref(true);
+                // 将响应式数据暴露给模板
+                return {
+                    message,
+                    IsActive,
+                    hasError,
+                    a,
+                    title,
+                    isBtn,
+                    obj,
+                    count,
+                    msg,
+                    activeColor,
+                    fontSize,
+                    styleObj,
+                    handler,
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

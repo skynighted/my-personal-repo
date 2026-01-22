@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入vue3框架 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <!-- 模板视图 -->
+    <div id="app">
+        <!-- 条件渲染 v-if v-else-if v-else -->
+        <div v-if="score>=90&&score<=100">优秀</div>
+        <div v-else-if="score>=80&&score<=90">良好</div>
+        <div v-else-if="score>=70&&score<=80">中等</div>
+        <div v-else>及格</div>
+        <!-- 列表渲染 v-for="item in items" items是数据数组
+            item是数组每一项 
+        -->
+        <ul>
+            <!-- <li v-for="(item,index) in arr" :key="index">
+                {{item.message}}--{{index}} -->
+            <li v-for="({message},index) in arr" :key="index">
+                {{message}}--{{index}}
+            </li>
+        </ul>
+        <div v-for="(value,key,index) in obj">
+            {{key}}--{{value}}--{{index}}
+        </div>
+    </div>
+    <script>
+        const {createApp,ref,reactive} = Vue;
+        // 创建vue应用  调用mount方法与id为app模版进行绑定
+        createApp({
+            // vue应用入口函数 组合式api 
+            setup(){
+                const score = ref(75);
+                const arr = [{message:'hello Vue'},{message:'hello Js'}]
+                const obj = {
+                    name:'terry',
+                    age:20
+                }
+                return{
+                    score,
+                    arr,
+                    obj
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
