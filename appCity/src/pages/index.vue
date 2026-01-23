@@ -69,7 +69,7 @@ import Map from './components/map.vue';
     color: white;
     text-align: center;
     line-height: 45px;
-    font-size: 28px;
+    font-size: 32px;
     font-family: "楷体";
 }
 .content{
