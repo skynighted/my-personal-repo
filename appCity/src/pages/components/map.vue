@@ -176,8 +176,8 @@ const initializeMap = async (AMap) => {
         const validCoordinates = getValidDeviceCoordinates(response);
         console.log('有效坐标:', validCoordinates);
         
-        // 设置默认中心点 - 使用中国中心点
-        let center = [104.195, 35.861]; // 中国中心点
+        // 设置默认中心点
+        let center = [103,36];
         
         // 如果有有效坐标，计算中心点
         if (validCoordinates.length > 0) {
@@ -194,7 +194,7 @@ const initializeMap = async (AMap) => {
             viewMode: '2D', // 使用2D模式避免3D问题
             zoom: 5, // 初始缩放级别
             center: center,
-            mapStyle: 'amap://styles/normal' // 使用标准样式
+            mapStyle: 'amap://styles/normal'// 使用标准样式
         });
         
         console.log('地图创建成功');
