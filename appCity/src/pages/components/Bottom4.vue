@@ -1,4 +1,3 @@
-[Bottom4.vue]
 <template>
     <div>
         <Title :title="title"></Title>
